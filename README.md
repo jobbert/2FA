@@ -1,2 +1,2 @@
-# phpBB_2FA
-a two factor authentication extension for phpBB.
+# 2FA
+A two factor authentication extension for phpBB.
