@@ -1,0 +1,28 @@
+{
+	"name": "jobbert/2FA",
+	"type": "phpbb-extension",
+	"description": "A two factor authentication extension for phpBB 3.1",
+	"homepage": "https://github.com/jobbert/2FA",
+	"version": "0.1.0",
+	"time": "10-06-2016",
+	"license": "GPL-2.0",
+	"authors": [{
+			"name": "Job Peters",
+			"homepage": "https://github.com/jobbert",
+			"role": "Lead Developer"
+		}],
+	"require": {
+		"php": ">=5.3.3",
+		"composer/installers": "~1.0",
+		"composer require scheb/two-factor-bundle": "~2.3",
+	},
+	"require-dev": {
+		"phpbb/epv": "dev-master"
+	},
+	"extra": {
+		"display-name": "Jobbert 2FA Extension",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.1.0"
+		}
+	}
+}
