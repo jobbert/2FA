@@ -21,4 +21,11 @@ namespace jobbert\2FA;
  */
 class ext extends \phpbb\extension\base
 {
+  public function registerBundles()
+  {
+      $bundles = array(
+          // ...
+          new Scheb\TwoFactorBundle\SchebTwoFactorBundle(),
+      );
+  }
 }
