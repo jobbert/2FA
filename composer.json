@@ -14,7 +14,7 @@
 	"require": {
 		"php": ">=5.3.3",
 		"composer/installers": "~1.0",
-		"scheb/two-factor-bundle": "~2.3",
+    "authy/php": "2.*"
 	},
 	"require-dev": {
 		"phpbb/epv": "dev-master"

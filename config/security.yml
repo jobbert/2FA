@@ -1,4 +1,0 @@
-# app/config/security.yml
-security:
-    access_decision_manager:
-        strategy: unanimous
