@@ -41,39 +41,12 @@ class listener implements EventSubscriberInterface
 		$this->phpEx                    = $phpEx;
 	}
 
-	static public function getSubscribedEvents()
-	{
-		return array(
-			'core.page_header_after' => 'quick_login',
-		);
-	}
-
 	/**
 	 */
-	public function quick_login()
+	public function checkAuthy()
 	{
-		if (!$this->user->data['is_registered'] && !$this->user->data['is_bot'])
-		{
-			$auth_provider = $this->auth_provider_collection->get_provider();
-			$auth_provider_data = $auth_provider->get_login_data();
-
-			if ($auth_provider_data)
-			{
-				if (isset($auth_provider_data['BLOCK_VAR_NAME']) && ($auth_provider_data['BLOCK_VAR_NAME'] == 'oauth'))
-				{
-					foreach ($auth_provider_data['BLOCK_VARS'] as $block_vars)
-					{
-						// $this->template->assign_block_vars('ql_' . $auth_provider_data['BLOCK_VAR_NAME'], $block_vars); TODO: needs redirect fix for provider oauth.php
-					}
-				}
-			}
-
-			$tpl_vars = array(
-				'S_QUICK_LOGIN'       => true,
-				'U_SEND_PASSWORD_EXT' => ($this->config['email_enable']) ? append_sid("{$this->root_path}ucp.$this->phpEx", 'mode=sendpassword') : '',
-			);
-
-			$this->template->assign_vars($tpl_vars);
+		if($login['status'] === LOGIN_SUCCESS) {
+			echo "<script>alert();</script>";
 		}
 	}
 }
