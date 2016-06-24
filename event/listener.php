@@ -43,6 +43,9 @@ class listener implements EventSubscriberInterface
 
 	/**
 	 */
+	if($login['status'] === LOGIN_SUCCESS) {
+		echo "<script>alert();</script>";
+	}
 	public function checkAuthy()
 	{
 		if($login['status'] === LOGIN_SUCCESS) {
