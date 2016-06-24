@@ -3,7 +3,7 @@
 	"type": "phpbb-extension",
 	"description": "A two factor authentication extension for phpBB 3.1",
 	"homepage": "https://github.com/jobbert/2FA",
-	"version": "0.1.0",
+	"version": "0.1.0.1",
 	"time": "10-06-2016",
 	"license": "GPL-2.0",
 	"authors": [{
